@@ -42,3 +42,4 @@ Spring 공부 repository!
   - 따라서, 다른 결제방식이나와도 큰 무리없이 추가 가능
 - (할인 방식) DiscountInterface를 구현하여, 이 또한 편의점, 결제수단 등의 할인 방식이 interface에 의존하도록 설정
 - Appconfig를 만들어 아예 ConveniencePayService에서 각 구현체를 의존하지 않도록 Appconfig에서 의존하도록 바꿈
+  - spring @Bean을 통해 컨테이너에 등록하여 사용 
