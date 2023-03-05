@@ -24,6 +24,10 @@ Spring 공부 repository!
 ### 요구사항
 - G24, SeeU, 11
 - 머니 결제기능 추가
+- 카드 결제기능 추가
+- 할인 기능 추가
+  - 편의점 브랜드 별
+  - 카드, 머니 등 결제방식 할인 기능
 
 ### 클래스
 - 결제 서비스
@@ -32,3 +36,9 @@ Spring 공부 repository!
 - 머니 어댑터
   - 머니 사용
   - 머니 사용 취소 
+
+### 중요 포인트
+- (결제 방식) PayMentInterface를 구현하여, MoneyAdapter, CardAdapter가 interface에 의존하도록 설정 (DIP)
+  - 따라서, 다른 결제방식이나와도 큰 무리없이 추가 가능
+- (할인 방식) DiscountInterface를 구현하여, 이 또한 편의점, 결제수단 등의 할인 방식이 interface에 의존하도록 설정
+- Appconfig를 만들어 아예 ConveniencePayService에서 각 구현체를 의존하지 않도록 Appconfig에서 의존하도록 바꿈
